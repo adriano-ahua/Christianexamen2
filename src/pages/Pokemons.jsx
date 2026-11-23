@@ -32,7 +32,7 @@ function Pokemons() {
           const id = extractId(pokemon.url)
           return {
             id,
-            name: pokémon.nombre,
+            name: pokemon.nombre,
             image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`,
           }
         })
@@ -68,7 +68,7 @@ function Pokemons() {
 
       {!loading && !error && (
         <div className="cards-grid">
-          {pokemons.map((pokémon) => (
+          {pokemons.map((pokemon) => (
             <article key={pokemon.id} className="card">
               <img src={pokemon.image} alt={pokemon.name} loading="lazy" />
               <h3>#{pokemon.id}</h3>
